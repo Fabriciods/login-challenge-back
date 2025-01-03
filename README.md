@@ -4,6 +4,7 @@ Este é um projeto simples desenvolvido com Ktor que oferece duas funcionalidade
 
 1. **/login:** Um endpoint `POST` que recebe `login: String` e `password: String`, e retorna um `userName:String` correspondente ao login. `/login` 
 2. **/users:** Um endpoint `GET` que retorna uma lista de usuários, incluindo `userName`, `password` e `login`.
+(./assets/Users.png)   
 
 ## Requisitos
 
