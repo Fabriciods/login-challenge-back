@@ -1,44 +1,19 @@
-# login-challenge
+# Projeto Ktor - Login e Listagem de Usuários
 
-This project was created using the [Ktor Project Generator](https://start.ktor.io).
+Este é um projeto simples desenvolvido com Ktor que oferece duas funcionalidades principais:
 
-Here are some useful links to get you started:
+1. **/login:** Um endpoint `POST` que recebe `login: String` e `password: String`, e retorna um `userName:String` correspondente ao login. `/login` 
+2. **/users:** Um endpoint `GET` que retorna uma lista de usuários, incluindo `userName`, `password` e `login`.
 
-- [Ktor Documentation](https://ktor.io/docs/home.html)
-- [Ktor GitHub page](https://github.com/ktorio/ktor)
-- The [Ktor Slack chat](https://app.slack.com/client/T09229ZC6/C0A974TJ9). You'll need to [request an invite](https://surveys.jetbrains.com/s3/kotlin-slack-sign-up) to join.
+## Requisitos
 
-## Features
+- JDK 11 ou superior
+- Ktor
+- Qualquer ferramenta para enviar requisições HTTP (por exemplo, Postman ou curl)
 
-Here's a list of features included in this project:
+## Como Rodar
 
-| Name                                                                   | Description                                                                        |
-| ------------------------------------------------------------------------|------------------------------------------------------------------------------------ |
-| [Content Negotiation](https://start.ktor.io/p/content-negotiation)     | Provides automatic content conversion according to Content-Type and Accept headers |
-| [Routing](https://start.ktor.io/p/routing)                             | Provides a structured routing DSL                                                  |
-| [kotlinx.serialization](https://start.ktor.io/p/kotlinx-serialization) | Handles JSON serialization using kotlinx.serialization library                     |
-| [Call Logging](https://start.ktor.io/p/call-logging)                   | Logs client requests                                                               |
-| [Authentication](https://start.ktor.io/p/auth)                         | Provides extension point for handling the Authorization header                     |
-| [Authentication Basic](https://start.ktor.io/p/auth-basic)             | Handles 'Basic' username / password authentication scheme                          |
+O projeto roda na porta **8080** caso já exista algum projeto rodando nessa porta será necessário trocar a porta no arquivo **application.yaml**. Para rodar o projeto, basta executar o arquivo main na classe Application ou usar o comando na raiz do projeto:
 
-## Building & Running
-
-To build or run the project, use one of the following tasks:
-
-| Task                          | Description                                                          |
-| -------------------------------|---------------------------------------------------------------------- |
-| `./gradlew test`              | Run the tests                                                        |
-| `./gradlew build`             | Build everything                                                     |
-| `buildFatJar`                 | Build an executable JAR of the server with all dependencies included |
-| `buildImage`                  | Build the docker image to use with the fat JAR                       |
-| `publishImageToLocalRegistry` | Publish the docker image locally                                     |
-| `run`                         | Run the server                                                       |
-| `runDocker`                   | Run using the local docker image                                     |
-
-If the server starts successfully, you'll see the following output:
-
-```
-2024-12-04 14:32:45.584 [main] INFO  Application - Application started in 0.303 seconds.
-2024-12-04 14:32:45.682 [main] INFO  Application - Responding at http://0.0.0.0:8080
-```
-
+```bash
+./gradlew run
